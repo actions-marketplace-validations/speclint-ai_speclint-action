@@ -1,4 +1,4 @@
-name: 'Speclint'
+name: 'Speclint Issue Linter'
 description: 'Lint your GitHub issues before AI coding agents touch them'
 author: 'Perpetual Agility LLC'
 inputs:
