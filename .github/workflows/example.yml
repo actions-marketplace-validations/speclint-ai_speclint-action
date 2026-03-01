@@ -1,0 +1,16 @@
+name: Speclint
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  speclint:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: speclint-ai/speclint-action@v1
+        with:
+          api-key: ${{ secrets.SPECLINT_API_KEY }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

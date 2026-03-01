@@ -1,0 +1,23 @@
+name: 'Speclint'
+description: 'Lint your GitHub issues before AI coding agents touch them'
+author: 'Perpetual Agility LLC'
+inputs:
+  api-key:
+    description: 'Your Speclint API key (speclint.ai/get-key)'
+    required: true
+  threshold:
+    description: 'Minimum completeness_score to add agent_ready label (default: 70)'
+    required: false
+    default: '70'
+  base-url:
+    description: 'API base URL (override for testing)'
+    required: false
+    default: 'https://refinebacklog.com'
+outputs:
+  completeness-score:
+    description: 'The completeness score (0-100) of the refined spec'
+  agent-ready:
+    description: 'Whether the issue passed the agent_ready threshold (true/false)'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
