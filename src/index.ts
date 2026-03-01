@@ -22,7 +22,7 @@ interface RefineResponse {
 async function run() {
   const apiKey = core.getInput('api-key', { required: true })
   const threshold = parseInt(core.getInput('threshold') || '70')
-  const baseUrl = core.getInput('base-url') || 'https://refinebacklog.com'
+  const baseUrl = core.getInput('base-url') || 'https://speclint.ai'
 
   const context = github.context
   const issue = context.payload.issue
@@ -35,7 +35,7 @@ async function run() {
   const issueText = `${issue.title}\n\n${issue.body || ''}`
 
   // Call Speclint API
-  const response = await fetch(`${baseUrl}/api/refine`, {
+  const response = await fetch(`${baseUrl}/api/lint`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

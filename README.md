@@ -54,7 +54,7 @@ That's it. Open any issue and Speclint will analyze it within seconds.
 |-------|----------|---------|-------------|
 | `api-key` | ✅ Yes | — | Your Speclint API key from [speclint.ai/get-key](https://speclint.ai/get-key) |
 | `threshold` | No | `70` | Minimum completeness score (0–100) to add the `agent_ready` label |
-| `base-url` | No | `https://refinebacklog.com` | API base URL (override for testing) |
+| `base-url` | No | `https://speclint.ai` | API base URL (override for testing) |
 
 ## Outputs
 
